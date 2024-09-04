@@ -4,10 +4,13 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 const daysOfWeek = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 
 const RainBreadSalesDashboard = () => {
+  console.log('RainBreadSalesDashboard component rendered'); // Mensaje de consola para depuración
+
   const [selectedDay, setSelectedDay] = useState('Lunes');
   const [rainAmount, setRainAmount] = useState(0);
 
   const calculateSales = (day, rain) => {
+    console.log(`Calculating sales for ${day} with ${rain} mm of rain`); // Otro mensaje de consola
     const baseSales = {
       'Lunes': 100,
       'Martes': 90,
@@ -72,4 +75,5 @@ const RainBreadSalesDashboard = () => {
 };
 
 export default RainBreadSalesDashboard;
+
 
